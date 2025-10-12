@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# typescript
+next-env.d.ts
+
+# IDE specific
+/.vscode/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# env
+.env
+.env.*

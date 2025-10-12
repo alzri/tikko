@@ -1,0 +1,43 @@
+{
+  "name": "tikko",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . && stylelint '**/*.{css,scss}'",
+    "lint:fix": "eslint . --fix && stylelint '**/*.{css,scss}' --fix",
+    "format": "prettier --write .",
+    "prettier:test": "prettier --check .",
+    "stylelint:test": "stylelint '**/*.{css,scss}' --allow-empty-input",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run lint && npm run prettier:test && npm run stylelint:test && npm run typecheck",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "15.5.4",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.2.4",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
