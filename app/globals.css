@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Inconsolata;
+  src: url('/fonts/Inconsolata-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url('/fonts/Inconsolata-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url('/fonts/Inconsolata-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url('/fonts/Inconsolata-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --background-primary: #030116;
+  --background-secondary: #2b0165;
+  --background-tertiary: #302c4d;
+  --background-quaternary: #f67464;
+  --content-primary: #fff;
+  --content-secondary: #e5e3ee;
+  --content-tertiary: #32081c;
+  --accented-color: #f67464;
+  --link-color: #ee827f;
+  --border-primary-color: #8885a2;
+  --border-secondary-color: #ecdbe5;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
