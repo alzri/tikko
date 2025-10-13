@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '@/node_modules/next/image';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>app/page.tsx</code>.
+            Ovo je test.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
