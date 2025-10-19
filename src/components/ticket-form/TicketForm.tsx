@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { InputField } from '../input-field/InputField';
 import styles from './TicketForm.module.scss';
-import { handleTicketData } from '@/src/utils/general';
+import { handleTicketData } from '@/utils/general';
 
 export const TicketForm = () => {
   const [name, setName] = useState('');

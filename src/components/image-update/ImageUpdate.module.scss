@@ -1,0 +1,86 @@
+.image-input-wrapper,
+.image-uploaded {
+  border: 1px dashed var(--border-secondary-color);
+  border-radius: 20px;
+  padding: 20px 30px;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+
+  .upload-icon {
+    margin: auto;
+    background-color: rgb(49, 48, 82, 60%);
+    border: 1px solid var(--border-primary-color);
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  p {
+    font-family: Inconsolata, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-content);
+  }
+}
+
+.instructions-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  margin-top: 5px;
+
+  p {
+    font-family: Inconsolata, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--primary-content);
+  }
+}
+
+.error {
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+
+    .info-icon {
+      path {
+        stroke: var(--error-message-color);
+      }
+    }
+  }
+
+  &-message {
+    font-family: Inconsolata, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--error-message-color);
+  }
+}
+
+.uploded-image {
+  object-fit: cover;
+  margin: auto;
+  border: 1px solid var(--border-primary-color);
+  border-radius: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.button {
+  font-family: Inconsolata, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--content-primary);
+  background-color: rgb(49, 48, 82, 60%);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
