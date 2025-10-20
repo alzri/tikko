@@ -1,5 +1,3 @@
-'use client';
-
 export const handleTicketData = async (
   e: React.FormEvent,
   {
