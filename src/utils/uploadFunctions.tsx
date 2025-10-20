@@ -19,7 +19,7 @@ export const useUploadFunction = () => {
     files.forEach((file) => {
       if (!file.type.startsWith('image/')) {
         setFileError('File should be an image');
-      } else if (file.size > 1024 * 500) {
+      } else if (file.size > 1024 * 50) {
         setFileError('File too large. Please upload an image under 500KB');
       } else {
         validFiles.push(file);

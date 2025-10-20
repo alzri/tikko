@@ -43,7 +43,10 @@
 
 html {
   overflow-x: hidden;
-  background-color: var(--background-primary);
+  height: 100vh;
+  background-image: url('../assets/images/background-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
