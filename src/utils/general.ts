@@ -1,6 +1,11 @@
 export const handleTicketData = async (
   e: React.FormEvent,
-  { name, email, username, avatarImage }: { name: string; email: string; username: string; avatarImage?: File }
+  {
+    name,
+    email,
+    username,
+    avatarImage,
+  }: { name: string; email: string; username: string; avatarImage?: File }
 ) => {
   e.preventDefault();
 
