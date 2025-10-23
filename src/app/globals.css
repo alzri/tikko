@@ -43,10 +43,9 @@
 
 html {
   overflow-x: hidden;
-  height: 100vh;
+  height: 100%;
   background-image: url('../assets/images/background-desktop.png');
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 * {
