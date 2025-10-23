@@ -1,11 +1,6 @@
 export const handleTicketData = async (
   e: React.FormEvent,
-  {
-    name,
-    email,
-    username,
-    avatarImage,
-  }: { name: string; email: string; username: string; avatarImage?: File }
+  { name, email, username, avatarImage }: { name: string; email: string; username: string; avatarImage?: File }
 ) => {
   e.preventDefault();
 
@@ -16,11 +11,9 @@ export const handleTicketData = async (
   if (avatarImage) formData.append('image', avatarImage);
 
   const res = await fetch('/api/submit', { method: 'POST', body: formData });
-  const data = await res.json();
+  const data: { success?: boolean; error?: string } = await res.json();
 
-  if (res.ok) {
-    alert('User added successfully!');
-  } else {
+  if (!res.ok) {
     alert(`Error: ${data.error}`);
   }
 };

@@ -13,7 +13,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
   const [avatarImage, setAvatarImage] = useState<File | undefined>(undefined);
   const [emailError, setEmailError] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,8 +23,10 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
     }
   
     setEmailError(null);
-    onTicketGenerated({ name, email, username, avatarImage }); // <-- call the prop
-  };  
+    await handleTicketData(e, { name, email, username, avatarImage });
+    onTicketGenerated({ name, email, username, avatarImage });
+  };
+  
 
   return (
     <div className={styles.formContainer}>
@@ -32,7 +34,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
         <InputField
           label="Upload Avatar"
           type="file"
-          onChange={(e) => setAvatarImage(e.target.files?.[0])}
+          onChange={e => setAvatarImage(e.target.files?.[0])}
         />
 
         <InputField
