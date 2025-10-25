@@ -17,11 +17,33 @@
   &-text {
     input {
       border: 1px solid var(--border-primary-color);
+      font-family: Inconsolata, sans-serif;
       border-radius: 10px;
       background-color: transparent;
       height: 40px;
       color: var(--content-primary);
       padding-left: 15px;
+
+      &:hover {
+        background-color: var(--background-tertiary);
+        opacity: 0.6;
+        cursor: pointer;
+        transition: all 1s;
+      }
+
+      &:focus {
+        border-color: var(--accented-color);
+        outline: none !important;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+        -webkit-text-fill-color: var(--content-primary);
+        transition: background-color 9999s ease-in-out 0s;
+      }
     }
   }
 }
