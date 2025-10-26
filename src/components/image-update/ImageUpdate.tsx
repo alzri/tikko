@@ -47,16 +47,25 @@ export const ImageUploader = () => {
               width={42}
               height={42}
             />
+            <input
+              type="file"
+              accept="image/*"
+              id={`fileInput-${index}`}
+              style={{ display: 'none' }}
+              onChange={(e) => replaceAvatar(e, index)}
+            />
             <div className={styles.buttonWrapper}>
               <button
                 className={clsx(styles.button, styles.remove)}
+                type="button"
                 onClick={() => removeFromList()}
               >
                 Remove image
               </button>
               <button
                 className={clsx(styles.button, styles.change)}
-                onClick={() => replaceAvatar(index)}
+                type="button"
+                onClick={() => document.getElementById(`fileInput-${index}`)?.click()}
               >
                 Change image
               </button>

@@ -3,6 +3,7 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 interface IUploadFileProps {
+  file?: File;
   url: string;
   name: string;
   size: number;
@@ -70,8 +71,28 @@ export const useUploadFunction = () => {
     }
   };
 
-  const replaceAvatar = (index: number) => {
-    setFileList((prevList) => prevList.filter((_, i) => i !== index));
+  const replaceAvatar = (e: React.ChangeEvent<HTMLInputElement>, indexToReplace: number) => {
+    const fileImage = e.target.files?.[0];
+    if (fileImage) {
+      const newUrl = URL.createObjectURL(fileImage);
+
+      setFileList((prev) => {
+        const updated = [...prev];
+        updated[indexToReplace] = {
+          file: fileImage,
+          url: newUrl,
+          name: fileImage.name,
+          size: fileImage.size,
+        };
+        return updated;
+      });
+
+      setSelectedAvatar((prev) => {
+        const updated = [...prev];
+        updated[indexToReplace] = fileImage;
+        return updated;
+      });
+    }
   };
 
   return {
