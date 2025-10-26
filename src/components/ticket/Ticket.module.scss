@@ -4,6 +4,7 @@
   align-items: center;
   background-image: url('../../assets/images/ticket-border.png');
   background-repeat: no-repeat;
+  background-size: cover;
   width: 600px;
   height: 280px;
   margin: auto;
@@ -85,5 +86,30 @@
   &-wrapper {
     transform: rotate(90deg);
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .ticket {
+    width: 340px;
+    height: 158px;
+  }
+
+  .conf-info {
+    h4 {
+      font-size: 25px;
+    }
+
+    .ticket-date-info {
+      font-size: 15px;
+    }
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .githun-name {
+    font-size: 15px;
   }
 }
