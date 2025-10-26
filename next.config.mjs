@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
-  images: {
-    unoptimized: true,
+  images: { unoptimized: true },
+  basePath: isProd ? '/tikko' : '',
+  assetPrefix: isProd ? '/tikko/' : '',
+  sassOptions: {
+    includePaths: ['./styles'],
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
 
@@ -24,4 +28,5 @@ const nextConfig = {
     return config;
   },
 };
+
 export default nextConfig;
