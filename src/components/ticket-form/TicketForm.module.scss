@@ -1,0 +1,47 @@
+.form-container {
+  margin: 0 150px;
+  height: 100%;
+
+  form {
+    display: grid;
+    gap: 30px;
+  }
+}
+
+.submit-button {
+  background-color: var(--accented-color);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-family: Inconsolata, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--content-tertiary);
+}
+
+.instructions-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  margin-top: 5px;
+
+  p {
+    font-family: Inconsolata, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--error-message-color);
+  }
+
+  .info-icon {
+    path {
+      stroke: var(--error-message-color);
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .form-container {
+    margin: 0 50px;
+  }
+}

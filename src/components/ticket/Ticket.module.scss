@@ -1,0 +1,115 @@
+.ticket {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+  background-image: url('../../assets/images/ticket-border.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+  height: 280px;
+  margin: auto;
+}
+
+.info-wrapper {
+  display: grid;
+  gap: 50px;
+  padding-left: 20px;
+}
+
+.conf-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.conf-info {
+  padding-top: 20px;
+  display: grid;
+  row-gap: 10px;
+
+  h4 {
+    font-family: Inconsolata, sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--content-primary);
+  }
+
+  .ticket-date-info {
+    font-family: Inconsolata, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--content-primary);
+  }
+}
+
+.user {
+  display: grid;
+  align-items: center;
+
+  &-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+
+    img {
+      border-radius: 15px;
+    }
+  }
+
+  &-name {
+    font-family: Inconsolata, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--content-primary);
+  }
+}
+
+.username-wrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+.githun-name {
+  font-family: Inconsolata, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--content-primary);
+}
+
+.ticket-number {
+  font-family: Inconsolata, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--content-primary);
+
+  &-wrapper {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .ticket {
+    width: 340px;
+    height: 158px;
+  }
+
+  .conf-info {
+    h4 {
+      font-size: 25px;
+    }
+
+    .ticket-date-info {
+      font-size: 15px;
+    }
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .githun-name {
+    font-size: 15px;
+  }
+}

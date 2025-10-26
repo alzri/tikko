@@ -1,0 +1,58 @@
+.ticket-form-wrapper {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+
+  .logo {
+    margin: auto;
+  }
+
+  .heading {
+    display: grid;
+    gap: 20px;
+    margin: 40px 0;
+
+    h1 {
+      font-family: Inconsolata, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      color: var(--content-primary);
+      text-align: center;
+    }
+
+    p {
+      font-family: Inconsolata, sans-serif;
+      font-size: 25px;
+      font-weight: 400;
+      color: var(--content-secondary);
+      text-align: center;
+    }
+
+    .user {
+      &-name {
+        background: linear-gradient(to right, var(--accented-color), var(--content-primary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &-email {
+        color: var(--link-color);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .ticket-form-wrapper {
+    .heading {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
