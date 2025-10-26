@@ -22,7 +22,7 @@ export default function Home() {
                 Your Journey to Coding Conf <br />
                 2025 Starts Here
               </h1>
-              <p>Secure your spot at next year's biggest coding conference.</p>
+              <p>Secure your spot at next year&apos;s biggest coding conference.</p>
             </div>
             <TicketForm
               onTicketGenerated={(data) => {
@@ -46,7 +46,7 @@ export default function Home() {
                 ticket is ready.
               </h1>
               <p>
-                We've emaild your ticket to <br />
+                We&apos;ve emaild your ticket to <br />
                 <span className={styles.userEmail}>{ticketData.email}</span> and will send updates
                 in <br /> the run up to the event.
               </p>
