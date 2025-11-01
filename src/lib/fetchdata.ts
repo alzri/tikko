@@ -1,7 +1,7 @@
 import { supabase } from './supabase';
 
-export interface TicketData {
-  id: number;
+export interface ITicketDataProps {
+  ticket_id: number;
   name: string;
   email: string;
   username: string;
@@ -9,7 +9,7 @@ export interface TicketData {
   created_at?: string;
 }
 
-export async function getTicketData(): Promise<TicketData> {
+export async function getITicketDataProps(): Promise<ITicketDataProps> {
   const { data, error } = await supabase
     .from('ticket_db')
     .select('*')

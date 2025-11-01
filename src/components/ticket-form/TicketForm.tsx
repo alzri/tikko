@@ -2,11 +2,11 @@
 import { useState } from 'react';
 import { InputField } from '../input-field/InputField';
 import styles from './TicketForm.module.scss';
-import { handleTicketData } from '@/utils/general';
+import { handleITicketDataProps } from '@/utils/general';
 import InfoIcon from '@/assets/images/icon-info.svg';
-import { TicketFormProps } from '@/utils/types';
+import { ITicketFormProps } from '@/utils/types';
 
-export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
+export const TicketForm = ({ onTicketGenerated }: ITicketFormProps) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
@@ -23,7 +23,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
     }
 
     setEmailError(null);
-    await handleTicketData(e, { name, email, username, avatarImage });
+    await handleITicketDataProps(e, { name, email, username, avatarImage });
     onTicketGenerated({ name, email, username, avatarImage });
   };
 

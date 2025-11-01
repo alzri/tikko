@@ -13,19 +13,23 @@
     "stylelint:test": "stylelint '**/*.{css,scss}' --allow-empty-input",
     "typecheck": "tsc --noEmit",
     "test": "npm run lint && npm run prettier:test && npm run stylelint:test && npm run typecheck",
-    "prepare": "husky"
+    "prepare": "husky",
+    "email": "email dev --dir src/emails"
   },
   "dependencies": {
+    "@react-email/components": "0.5.7",
     "@supabase/supabase-js": "^2.75.0",
     "clsx": "^2.1.1",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-dropzone": "^14.3.8",
+    "resend": "^6.4.0",
     "sass": "^1.93.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@react-email/preview-server": "^4.3.2",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -35,6 +39,7 @@
     "husky": "^8.0.0",
     "lint-staged": "^16.2.4",
     "prettier": "^3.6.2",
+    "react-email": "4.3.2",
     "stylelint": "^16.25.0",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-prettier": "^5.0.3",

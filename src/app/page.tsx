@@ -3,13 +3,13 @@
 import { useState } from 'react';
 import { TicketForm } from '../components/ticket-form/TicketForm';
 import { Ticket } from '@/components/ticket/Ticket';
-import { TicketData } from '@/lib/fetchdata';
+import { ITicketDataProps } from '@/lib/fetchdata';
 import defaultAvatar from '../assets/images/image-avatar.jpg';
 import LogoIcon from '@/assets/images/logo-full.svg';
 import styles from './page.module.scss';
 
 export default function Home() {
-  const [ticketData, setTicketData] = useState<TicketData | null>(null);
+  const [ticketData, setITicketDataProps] = useState<ITicketDataProps | null>(null);
 
   return (
     <main>
@@ -20,14 +20,14 @@ export default function Home() {
             <div className={styles.heading}>
               <h1>
                 Your Journey to Coding Conf <br />
-                2025 Starts Here
+                2026 Starts Here
               </h1>
               <p>Secure your spot at next year&apos;s biggest coding conference.</p>
             </div>
             <TicketForm
               onTicketGenerated={(data) => {
-                setTicketData({
-                  id: Math.floor(Math.random() * 1000),
+                setITicketDataProps({
+                  ticket_id: Math.floor(Math.random() * 1000),
                   name: data.name,
                   email: data.email,
                   username: data.username,

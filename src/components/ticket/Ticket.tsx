@@ -2,9 +2,9 @@ import styles from './Ticket.module.scss';
 import ConfLogo from '@/assets/images/logo-mark.svg';
 import GitHuvIcon from '@/assets/images/icon-github.svg';
 import Image from 'next/image';
-import { TicketData } from '@/lib/fetchdata';
+import { ITicketDataProps } from '@/lib/fetchdata';
 
-export const Ticket = ({ id, name, username, avatar }: TicketData) => {
+export const Ticket = ({ ticket_id, name, username, avatar }: ITicketDataProps) => {
   return (
     <div className={styles.ticket}>
       <div className={styles.infoWrapper}>
@@ -12,7 +12,7 @@ export const Ticket = ({ id, name, username, avatar }: TicketData) => {
           <ConfLogo />
           <div className={styles.confInfo}>
             <h4>Coding Conf</h4>
-            <p className={styles.ticketDateInfo}>Jan 31, 2025 / Austin, TX</p>
+            <p className={styles.ticketDateInfo}>Jan 31, 2026 / Austin, TX</p>
           </div>
         </div>
         <div className={styles.userInfoWrapper}>
@@ -27,7 +27,7 @@ export const Ticket = ({ id, name, username, avatar }: TicketData) => {
         </div>
       </div>
       <div className={styles.ticketNumberWrapper}>
-        <p className={styles.ticketNumber}>#{id}</p>
+        <p className={styles.ticketNumber}>#{ticket_id}</p>
       </div>
     </div>
   );
