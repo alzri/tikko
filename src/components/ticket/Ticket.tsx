@@ -12,7 +12,7 @@ export const Ticket = ({ id, name, username, avatar }: TicketData) => {
           <ConfLogo />
           <div className={styles.confInfo}>
             <h4>Coding Conf</h4>
-            <p className={styles.ticketDateInfo}>Jan 31, 2025 / Austin, TX</p>
+            <p className={styles.ticketDateInfo}>Jan 31, 2026 / Austin, TX</p>
           </div>
         </div>
         <div className={styles.userInfoWrapper}>
