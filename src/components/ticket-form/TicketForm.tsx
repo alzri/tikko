@@ -21,10 +21,13 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
       setEmailError('Please enter a valid email address');
       return;
     }
-
     setEmailError(null);
-    await handleTicketData(e, { name, email, username, avatarImage });
-    onTicketGenerated({ name, email, username, avatarImage });
+
+    const ticketInfo = await handleTicketData(e, { name, email, username, avatarImage });
+
+    if (ticketInfo) {
+      onTicketGenerated(ticketInfo); // Pass the full ticket object
+    }
   };
 
   return (

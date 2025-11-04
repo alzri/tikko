@@ -14,6 +14,7 @@ export async function POST(req: Request) {
     const email = formData.get('email') as string;
     const username = formData.get('username') as string;
     const avatarFile = formData.get('image') as File | null;
+    const ticket_id = formData.get('ticket_id') as string;
 
     let imageUrl: string | null = null;
 
@@ -37,7 +38,7 @@ export async function POST(req: Request) {
     // Insert into database
     const { data: insertedData, error: dbError } = await supabase
       .from('ticket_db')
-      .insert([{ name, email, username, image: imageUrl }])
+      .insert([{ ticket_id, name, email, username, image: imageUrl }])
       .select('*')
       .single();
 
@@ -46,7 +47,7 @@ export async function POST(req: Request) {
     // Render React email component
     const html = await render(
       Email({
-        id: insertedData.id?.toString() || 'N/A',
+        ticket_id,
         name,
         username,
       })
@@ -65,11 +66,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, data: insertedData });
   } catch (err: unknown) {
     let message = 'Unknown error';
-  
+
     if (err instanceof Error) {
       message = err.message;
     }
-  
+
     console.error('Error in /api/submit:', message);
     return NextResponse.json({ error: message }, { status: 500 });
   }

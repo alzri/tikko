@@ -4,7 +4,7 @@ import GitHuvIcon from '@/assets/images/icon-github.svg';
 import Image from 'next/image';
 import { TicketData } from '@/lib/fetchdata';
 
-export const Ticket = ({ id, name, username, avatar }: TicketData) => {
+export const Ticket = ({ ticket_id, name, username, avatar }: TicketData) => {
   return (
     <div className={styles.ticket}>
       <div className={styles.infoWrapper}>
@@ -27,7 +27,7 @@ export const Ticket = ({ id, name, username, avatar }: TicketData) => {
         </div>
       </div>
       <div className={styles.ticketNumberWrapper}>
-        <p className={styles.ticketNumber}>#{id}</p>
+        <p className={styles.ticketNumber}>#{ticket_id}</p>
       </div>
     </div>
   );

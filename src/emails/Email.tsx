@@ -2,12 +2,12 @@ import * as React from 'react';
 import { Body, Container, Head, Heading, Hr, Html, Preview, Text } from '@react-email/components';
 
 interface IEmailProps {
-  id: string;
+  ticket_id: string;
   name: string;
   username: string;
 }
 
-export const Email = ({ id, name, username }: IEmailProps) => {
+export const Email = ({ ticket_id, name, username }: IEmailProps) => {
   return (
     <Html>
       <Head />
@@ -54,7 +54,7 @@ export const Email = ({ id, name, username }: IEmailProps) => {
                 <strong>Username: </strong>@{username}
               </Text>
               <Text style={{ color: '#32081C' }}>
-                <strong>Ticket number: </strong>#{id}
+                <strong>Ticket number: </strong>#{ticket_id}
               </Text>
             </div>
           </Container>

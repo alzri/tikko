@@ -1,7 +1,7 @@
 import { supabase } from './supabase';
 
 export interface TicketData {
-  id: number;
+  ticket_id: string;
   name: string;
   email: string;
   username: string;

@@ -4,7 +4,7 @@ export const uploadAvatar = async (file: File) => {
   const fileName = `${Date.now()}_${file.name}`;
 
   const { data: uploadData, error: uploadError } = await supabase.storage
-    .from('user-images') // your bucket name
+    .from('user-images')
     .upload(fileName, file);
 
   if (uploadError) throw uploadError;
