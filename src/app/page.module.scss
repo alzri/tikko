@@ -7,6 +7,10 @@
     margin: auto;
   }
 
+  .form-container {
+    display: grid;
+  }
+
   .heading {
     display: grid;
     gap: 20px;
@@ -28,18 +32,20 @@
       text-align: center;
     }
 
-    .user {
-      &-name {
-        background: linear-gradient(to right, var(--accented-color), var(--content-primary));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    .user-name {
+      background: linear-gradient(to right, var(--accented-color), var(--content-primary));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-      &-email {
-        color: var(--link-color);
-      }
+    .user-email {
+      color: var(--link-color);
     }
   }
+}
+
+.ticker-container {
+  display: grid;
 }
 
 @media only screen and (width <= 750px) {

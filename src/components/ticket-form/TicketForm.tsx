@@ -30,7 +30,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
   };
 
   return (
-    <div className={styles.formContainer}>
+    <div className={styles['form-container']}>
       <form onSubmit={onSubmit}>
         <InputField
           label="Full Name"
@@ -50,8 +50,8 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
             }}
           />
           {emailError && (
-            <div className={styles.instructionsInfo}>
-              <InfoIcon className={styles.infoIcon} />
+            <div className={styles['instructions-info']}>
+              <InfoIcon className={styles['info-icon']} />
               <p>Please enter a valid email address.</p>
             </div>
           )}
@@ -64,7 +64,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
           onChange={(e) => setUsername(e.target.value)}
         />
 
-        <button className={styles.submitButton} type="submit">
+        <button className={styles['submit-button']} type="submit">
           Generate Ticket
         </button>
       </form>

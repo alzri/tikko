@@ -13,7 +13,7 @@ export const InputField = ({ label, type, value, onChange, ...rest }: IInputFiel
 
   return (
     <div {...rest}>
-      <label htmlFor={inputId} className={clsx(styles.label, styles.labelText)}>
+      <label htmlFor={inputId} className={clsx(styles.label, styles['label-text'])}>
         {label}
         <input id={inputId} type={type} value={value ?? ''} onChange={onChange} />
       </label>

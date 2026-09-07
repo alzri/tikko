@@ -11,10 +11,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className={styles.ticketFormWrapper}>
+      <div className={styles['ticket-form-wrapper']}>
         <LogoIcon className={styles.logo} />
         {!ticketData ? (
-          <div className={styles.formContainer}>
+          <div className={styles['form-container']}>
             <div className={styles.heading}>
               <h1>
                 Your Journey to Coding Conf <br />
@@ -34,15 +34,15 @@ export default function Home() {
             />
           </div>
         ) : (
-          <div className={styles.tickerContaner}>
+          <div className={styles['ticker-container']}>
             <div className={styles.heading}>
               <h1>
-                Congrats, <span className={styles.userName}>{ticketData.name}</span>!<br /> Your
+                Congrats, <span className={styles['user-name']}>{ticketData.name}</span>!<br /> Your
                 ticket is ready.
               </h1>
               <p>
                 We&apos;ve emailed your ticket to <br />
-                <span className={styles.userEmail}>{ticketData.email}</span> and will send updates
+                <span className={styles['user-email']}>{ticketData.email}</span> and will send updates
                 in <br /> the run up to the event.
               </p>
             </div>
