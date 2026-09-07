@@ -7,13 +7,6 @@
   font-weight: 400;
   color: var(--content-primary);
 
-  &-image {
-    input {
-      border: 1px dotted var(--border-primary-color);
-      border-radius: 10px;
-    }
-  }
-
   &-text {
     input {
       border: 1px solid var(--border-primary-color);
@@ -40,7 +33,7 @@
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+        box-shadow: 0 0 0 1000px transparent inset !important;
         -webkit-text-fill-color: var(--content-primary);
         transition: background-color 9999s ease-in-out 0s;
       }

@@ -5,7 +5,6 @@ export interface TicketData {
   name: string;
   email: string;
   username: string;
-  avatar: string;
   created_at?: string;
 }
 

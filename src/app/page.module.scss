@@ -31,7 +31,6 @@
     .user {
       &-name {
         background: linear-gradient(to right, var(--accented-color), var(--content-primary));
-        -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -43,7 +42,7 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (width <= 750px) {
   .ticket-form-wrapper {
     .heading {
       h1 {

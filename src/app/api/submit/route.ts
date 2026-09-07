@@ -13,32 +13,12 @@ export async function POST(req: Request) {
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const username = formData.get('username') as string;
-    const avatarFile = formData.get('image') as File | null;
     const ticket_id = formData.get('ticket_id') as string;
-
-    let imageUrl: string | null = null;
-
-    // Upload avatar to Supabase storage
-    if (avatarFile) {
-      const arrayBuffer = await avatarFile.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
-      const fileName = `${Date.now()}_${avatarFile.name}`;
-
-      const { error: uploadError } = await supabase.storage
-        .from('user-images')
-        .upload(fileName, buffer, { contentType: avatarFile.type });
-
-      if (uploadError) throw new Error(uploadError.message);
-
-      const { data: publicData } = supabase.storage.from('user-images').getPublicUrl(fileName);
-
-      imageUrl = publicData.publicUrl;
-    }
 
     // Insert into database
     const { data: insertedData, error: dbError } = await supabase
       .from('ticket_db')
-      .insert([{ ticket_id, name, email, username, image: imageUrl }])
+      .insert([{ ticket_id, name, email, username }])
       .select('*')
       .single();
 

@@ -6,12 +6,10 @@ export const handleTicketData = async (
     name,
     email,
     username,
-    avatarImage,
   }: {
     name: string;
     email: string;
     username: string;
-    avatarImage?: File;
   }
 ) => {
   e.preventDefault();
@@ -23,7 +21,6 @@ export const handleTicketData = async (
   formData.append('name', name);
   formData.append('email', email);
   formData.append('username', username);
-  if (avatarImage) formData.append('image', avatarImage);
 
   const res = await fetch('/api/submit', {
     method: 'POST',
@@ -42,6 +39,5 @@ export const handleTicketData = async (
     name,
     email,
     username,
-    avatarImage,
   };
 };
