@@ -20,7 +20,7 @@ export default function Home() {
                 Your Journey to Coding Conf <br />
                 2025 Starts Here
               </h1>
-              <p>Secure your spot at next years biggest coding conference.</p>
+              <p>Secure your spot at next years biggest coding conference!</p>
             </div>
             <TicketForm
               onTicketGenerated={(ticketInfo) => {
