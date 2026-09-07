@@ -18,7 +18,7 @@ export default function Home() {
             <div className={styles.heading}>
               <h1>
                 Your Journey to Coding Conf <br />
-                2025 Starts Here
+                2026 Starts Here
               </h1>
               <p>Secure your spot at next years biggest coding conference!</p>
             </div>
