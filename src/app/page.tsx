@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { TicketForm } from '../components/ticket-form/TicketForm';
 import { Ticket } from '@/components/ticket/Ticket';
 import { TicketData } from '@/lib/fetchdata';
-import defaultAvatar from '../assets/images/image-avatar.jpg';
 import LogoIcon from '@/assets/images/logo-full.svg';
 import styles from './page.module.scss';
 
@@ -30,9 +29,6 @@ export default function Home() {
                   name: ticketInfo.name,
                   email: ticketInfo.email,
                   username: ticketInfo.username,
-                  avatar: ticketInfo.avatarImage
-                    ? URL.createObjectURL(ticketInfo.avatarImage)
-                    : defaultAvatar.src,
                 });
               }}
             />

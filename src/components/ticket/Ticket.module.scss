@@ -89,7 +89,7 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (width <= 750px) {
   .ticket {
     width: 340px;
     height: 158px;

@@ -4,31 +4,27 @@ A conference ticket generator built with **Next.js (App Router)**, **React**, an
 
 ## Features
 
-* Conference registration form
-* Collects:
+- Conference registration form
+- Collects:
+  - Full Name
+  - Email Address
+  - GitHub Username
 
-  * Full Name
-  * Email Address
-  * GitHub Username
-  * Avatar image
-* Form validation
-* Email format validation
-* Avatar upload validation
-* JPG and PNG image support
-* Maximum avatar size of 500KB
-* Personalized ticket generation
-* Supabase integration for storing submitted data
-* Responsive layout
-* Reusable React components
+- Form validation
+- Email format validation
+- Personalized ticket generation
+- Supabase integration for storing submitted data
+- Responsive layout
+- Reusable React components
 
 ## Data Flow
 
 1. User fills out the registration form
 2. Validate required fields and input formats
 3. Validate the uploaded avatar:
+   - JPG or PNG
+   - Maximum file size of 500KB
 
-   * JPG or PNG
-   * Maximum file size of 500KB
 4. Submit the validated form data
 5. Store the submitted data using Supabase
 6. Generate a personalized conference ticket
@@ -41,12 +37,6 @@ A conference ticket generator built with **Next.js (App Router)**, **React**, an
 Form validation is performed before submitting the data to prevent invalid or incomplete information from being stored.
 
 The validation covers required fields, email format, and avatar requirements.
-
-### Avatar upload
-
-The application accepts JPG and PNG images with a maximum file size of 500KB.
-
-The validation is handled before the upload to avoid unnecessary requests and provide immediate feedback to the user.
 
 ### Supabase
 
@@ -68,11 +58,11 @@ Tablet uses the mobile layout instead of introducing a separate tablet-specific 
 
 ## Trade-offs & Limitations
 
-* Supabase is used as a managed backend instead of implementing a custom API
-* Avatar validation is performed before upload to reduce unnecessary requests
-* Ticket generation depends on successfully submitted form data
-* The application does not include authentication because user accounts are not required for the registration flow
-* The application focuses on the ticket generation flow rather than providing a full conference management system
+- Supabase is used as a managed backend instead of implementing a custom API
+- Avatar validation is performed before upload to reduce unnecessary requests
+- Ticket generation depends on successfully submitted form data
+- The application does not include authentication because user accounts are not required for the registration flow
+- The application focuses on the ticket generation flow rather than providing a full conference management system
 
 These decisions were made to keep the project focused on the registration and ticket generation experience while still using a real backend service.
 
@@ -89,28 +79,28 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ### Core
 
-* Next.js (App Router)
-* React
-* TypeScript
+- Next.js (App Router)
+- React
+- TypeScript
 
 ### Styling
 
-* SCSS Modules
-* `clsx`
+- SCSS Modules
+- `clsx`
 
 ### Tooling
 
-* ESLint
-* Prettier
-* Stylelint
-* Husky
-* lint-staged
+- ESLint
+- Prettier
+- Stylelint
+- Husky
+- lint-staged
 
 ### Extras
 
-* Supabase – database and backend services
-* React Hook Form – form state management
-* Zod – form validation
+- Supabase – database and backend services
+- React Hook Form – form state management
+- Zod – form validation
 
 ## Setup and Installation
 

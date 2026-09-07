@@ -10,7 +10,6 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
-  const [avatarImage, setAvatarImage] = useState<File | undefined>(undefined);
   const [emailError, setEmailError] = useState<string | null>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,7 +22,7 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
     }
     setEmailError(null);
 
-    const ticketInfo = await handleTicketData(e, { name, email, username, avatarImage });
+    const ticketInfo = await handleTicketData(e, { name, email, username });
 
     if (ticketInfo) {
       onTicketGenerated(ticketInfo); // Pass the full ticket object
@@ -33,12 +32,6 @@ export const TicketForm = ({ onTicketGenerated }: TicketFormProps) => {
   return (
     <div className={styles.formContainer}>
       <form onSubmit={onSubmit}>
-        <InputField
-          label="Upload Avatar"
-          type="file"
-          onChange={(e) => setAvatarImage(e.target.files?.[0])}
-        />
-
         <InputField
           label="Full Name"
           type="text"

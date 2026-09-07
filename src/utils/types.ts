@@ -3,7 +3,6 @@ export interface TicketData {
   name: string;
   email: string;
   username: string;
-  avatar: string;
 }
 
 export interface TicketFormProps {
@@ -12,7 +11,6 @@ export interface TicketFormProps {
     name: string;
     email: string;
     username: string;
-    avatarImage?: File;
   }) => void;
 }
 
@@ -25,7 +23,6 @@ export interface ITicketApiResponseProps {
     name: string;
     email: string;
     username: string;
-    image?: string;
     created_at?: string;
   };
 }

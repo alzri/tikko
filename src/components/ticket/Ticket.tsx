@@ -1,10 +1,9 @@
 import styles from './Ticket.module.scss';
 import ConfLogo from '@/assets/images/logo-mark.svg';
 import GitHuvIcon from '@/assets/images/icon-github.svg';
-import Image from 'next/image';
 import { TicketData } from '@/lib/fetchdata';
 
-export const Ticket = ({ ticket_id, name, username, avatar }: TicketData) => {
+export const Ticket = ({ ticket_id, name, username }: TicketData) => {
   return (
     <div className={styles.ticket}>
       <div className={styles.infoWrapper}>
@@ -16,7 +15,6 @@ export const Ticket = ({ ticket_id, name, username, avatar }: TicketData) => {
           </div>
         </div>
         <div className={styles.userInfoWrapper}>
-          <Image src={avatar} alt={name} width={80} height={80} />
           <div className={styles.user}>
             <p className={styles.userName}>{name}</p>
             <div className={styles.usernameWrapper}>
